@@ -2,4 +2,67 @@
   --color-navitems: #918ca4;
   --color-heroHeading: #ffffff;
   --color-plainText: #000000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.nav {
+  display: flex;
+  /* width: 85%;
+  margin: auto; */
+  padding: 1rem 5rem;
+  justify-content: space-between;
+}
+
+.nav .navbar {
+  flex: 1;
+}
+
+.nav .navbar ul {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: end;
+  gap: 1rem;
+}
+
+.nav .navbar ul li {
+  list-style-type: none;
+}
+.nav .navbar ul li a {
+  text-decoration: none;
+  color: var(--color-navitems);
+  font-size: 1.5rem;
+}
+
+.hero {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/Images/heroImage.jpg");
+  color: var(--color-heroHeading);
+}
+
+.hero h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.hero button {
+  width: 50%;
+  font-size: 2.5rem;
+  padding: 1rem;
+  border: none;
+  font-weight: 700;
+  color: #a03a03;
+  border-radius: 2rem;
+  transition: all 0.3s;
+}
+
+.hero button:hover {
+  background-color: #a03a03;
+  color: #ffffff;
 }
