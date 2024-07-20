@@ -14,6 +14,7 @@ html {
   --color-white: #ffffff;
   --color-plainText: #000000;
   --color-brown: #a03a03;
+  --color-blue: #0e1f4e;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -150,7 +151,8 @@ html {
 .media-element {
   display: flex;
   align-items: center;
-  padding: 1rem;
+  padding-right: 0;
+  padding-left: 2rem;
   max-width: 600px;
 }
 
@@ -196,4 +198,110 @@ html {
   font-size: 5rem;
   color: var(--color-brown);
   font-weight: 500;
+}
+
+/* Need More */
+.need-more {
+  display: flex;
+  justify-content: center;
+}
+
+.need-more .back-square {
+  background: var(--color-blue);
+  color: var(--color-heroHeading);
+  width: 50rem;
+  height: 15rem;
+  text-align: center;
+}
+
+.need-more .back-square h3 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.need-more .back-square a {
+  color: var(--color-brown);
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+/* Make Us Different */
+.differences {
+  background: var(--color-blue);
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+}
+
+.differences h3 {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.feature__element {
+  display: flex;
+  width: 400px;
+}
+
+.feature__element img {
+  width: 100px;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.feature__element .feature__element__desc {
+  font-size: 2rem;
+  color: var(--color-white);
+  text-align: left;
+  font-weight: 200;
+}
+
+/* Partners */
+
+.partners h3 {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--color-brown);
+}
+
+.ticker {
+  overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.ticker__wrap {
+  display: inline-block;
+  padding-left: 100%; /* Push initial position to the right */
+  animation: ticker 25s linear infinite; /* Adjust duration as needed */
+}
+
+.ticker__item {
+  display: inline-block;
+  padding: 0 40px; /* Space between logos */
+}
+
+.ticker__image {
+  height: 25rem;
+  width: auto;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
