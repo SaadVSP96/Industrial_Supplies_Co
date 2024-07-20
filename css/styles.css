@@ -1,10 +1,24 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 :root {
   --color-navitems: #918ca4;
   --color-heroHeading: #ffffff;
+  --color-white: #ffffff;
   --color-plainText: #000000;
+  --color-brown: #a03a03;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
+
+/* Nav Bar */
 
 .nav {
   display: flex;
@@ -23,7 +37,7 @@
   align-items: center;
   width: 100%;
   justify-content: end;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .nav .navbar ul li {
@@ -32,8 +46,10 @@
 .nav .navbar ul li a {
   text-decoration: none;
   color: var(--color-navitems);
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
+
+/* Hero */
 
 .hero {
   width: 100%;
@@ -47,22 +63,116 @@
 }
 
 .hero h1 {
-  font-size: 4rem;
+  font-size: 6rem;
   text-align: center;
 }
 
 .hero button {
   width: 50%;
-  font-size: 2.5rem;
+  font-size: 4rem;
   padding: 1rem;
   border: none;
   font-weight: 700;
-  color: #a03a03;
+  color: var(--color-brown);
   border-radius: 2rem;
   transition: all 0.3s;
 }
 
 .hero button:hover {
-  background-color: #a03a03;
+  background-color: var(--color-brown);
   color: #ffffff;
+}
+
+/* About */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2.5rem;
+  gap: 2rem;
+}
+
+.about__picture--align-center {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.about__picture img {
+  width: 90%;
+  height: auto;
+}
+
+.about__desc {
+  /* border: 2px solid #333; */
+  padding: 2rem;
+}
+
+.about__desc h3 {
+  color: var(--color-brown);
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+.about__desc p {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--color-plainText);
+  padding-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+.about .contact-button {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.about .contact-button button {
+  width: 50%;
+  font-size: 4rem;
+  padding: 1rem;
+  border: none;
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: var(--color-brown);
+  border-radius: 2rem;
+  transition: all 0.3s;
+}
+
+.about .contact-button button:hover {
+  background-color: var(--color-white);
+  color: var(--color-brown);
+}
+
+/* Most Loved Products */
+
+.media-element {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  max-width: 600px;
+}
+
+.media-element__image img {
+  width: 100px;
+  height: auto;
+  margin-right: 1.5rem;
+}
+
+.media-element__content {
+  flex: 1;
+}
+
+.media-element__heading {
+  margin: 0;
+  font-size: 3rem; /* Font size for the heading */
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
+
+.media-element__description {
+  margin: 5px 0 0;
+  font-size: 2rem; /* Font size for the description */
+  color: ;
 }
