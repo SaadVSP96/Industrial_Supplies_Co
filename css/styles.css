@@ -168,11 +168,32 @@ html {
   margin: 0;
   font-size: 3rem; /* Font size for the heading */
   font-weight: bold;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .media-element__description {
   margin: 5px 0 0;
-  font-size: 2rem; /* Font size for the description */
-  color: ;
+  font-size: 2.5rem; /* Font size for the description */
+  color: var(--color-plainText);
+  font-weight: 300;
+}
+
+/* Loved Products */
+.loved-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.loved-products .topRow {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.loved-products .topRow h3 {
+  font-size: 5rem;
+  color: var(--color-brown);
+  font-weight: 500;
 }
