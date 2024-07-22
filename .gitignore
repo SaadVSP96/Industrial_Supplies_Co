@@ -1,1 +1,4 @@
 photopea/
+node_modules/
+dist/
+.cache/
