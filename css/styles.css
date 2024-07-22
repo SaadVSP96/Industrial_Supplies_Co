@@ -370,3 +370,94 @@ html {
   box-sizing: border-box;
   font-size: 2.5rem;
 }
+
+.contact-form__form button {
+  width: 50%;
+  align-self: center;
+  font-size: 4rem;
+  padding: 1rem;
+  border: none;
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: var(--color-brown);
+  border-radius: 2rem;
+  transition: all 0.3s;
+}
+
+.contact-form__form button:hover {
+  background-color: var(--color-white);
+  color: var(--color-brown);
+}
+
+.testimonial-container p {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--color-white);
+  padding-bottom: 1.5rem;
+  margin-top: 0;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* Download */
+.download {
+  background: var(--color-blue);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  width: 100%;
+  padding-left: 3rem;
+  gap: 2rem;
+  align-items: center;
+}
+
+.download__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.download__image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.download__pitch {
+  color: var(--color-white);
+}
+
+.download__pitch h3 {
+  text-align: left;
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+.download__pitch p {
+  text-align: left;
+  font-size: 2.5rem;
+  color: var(--color-white);
+}
+
+.download__btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.download__btn button {
+  font-size: 4rem;
+  padding: 1rem;
+  border: none;
+  font-weight: 700;
+  color: var(--color-white);
+  background-color: var(--color-brown);
+  border-radius: 2rem;
+  transition: all 0.3s;
+}
+
+.download__btn button:hover {
+  background-color: var(--color-white);
+  color: var(--color-brown);
+}
