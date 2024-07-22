@@ -39,7 +39,7 @@ html {
   align-items: center;
   width: 100%;
   justify-content: end;
-  gap: 2rem;
+  gap: 2.4rem;
 }
 
 .nav .navbar ul li {
@@ -48,7 +48,39 @@ html {
 .nav .navbar ul li a {
   text-decoration: none;
   color: var(--color-navitems);
-  font-size: 2rem;
+  font-size: 2.5rem;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--color-navitems);
+  font-size: 3rem;
+  cursor: pointer;
+  color: var(--color-navitems);
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .nav .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 6rem;
+    right: 5rem;
+    background-color: var(--color-white);
+    width: auto;
+    padding: 0;
+  }
+
+  .nav .navbar ul.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+    width: 15%;
+  }
 }
 
 /* Hero */
@@ -112,7 +144,7 @@ html {
 .about__desc h3 {
   color: var(--color-brown);
   text-align: center;
-  font-size: 3rem;
+  font-size: 5rem;
   font-weight: 500;
   margin-top: 0;
 }
@@ -147,7 +179,26 @@ html {
   color: var(--color-brown);
 }
 
-/* Most Loved Products */
+@media (max-width: 768px) {
+  .about {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about__picture--align-center {
+    order: -1; /* This moves the image to the top */
+  }
+
+  .about .contact-button {
+    order: 1; /* This moves the button to the bottom */
+  }
+
+  .about__desc {
+    order: 0;
+  }
+}
+
+/* Media Elements */
 
 .media-element {
   display: flex;
@@ -169,14 +220,14 @@ html {
 
 .media-element__heading {
   margin: 0;
-  font-size: 3rem; /* Font size for the heading */
+  font-size: 3rem;
   font-weight: bold;
   padding-bottom: 2rem;
 }
 
 .media-element__description {
   margin: 5px 0 0;
-  font-size: 2.5rem; /* Font size for the description */
+  font-size: 2.5rem;
   color: var(--color-plainText);
   font-weight: 300;
 }
@@ -199,6 +250,17 @@ html {
   font-size: 5rem;
   color: var(--color-brown);
   font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .loved-products {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .media-element {
+    max-width: 100%;
+  }
 }
 
 /* Need More */
@@ -397,6 +459,12 @@ html {
   margin-top: 0;
   text-align: justify;
   line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .contact-testimonials {
+    flex-direction: column;
+  }
 }
 
 /* Download */
